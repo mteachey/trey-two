@@ -18,12 +18,19 @@ export default function List(props) {
                   content={card.content}
                   //onAddCard={props.onAddCard}
                   onClickDelete={props.onClickDelete}
+                  onClickAdd={props.onClickAdd}
                 />)}
             </div>
+            <button
+                type='button'
+                className='List-add-button'
+                onClick={() => props.onClickAdd(props.id)}>
+          + Add Random Card
+        </button>
         </section>
     );
 };
 
-/*List.defaultProps = {
+List.defaultProps = {
     onClickAdd: () => {},
-  }*/
+}
